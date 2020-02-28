@@ -1,0 +1,28 @@
+/*!
+ * common css
+ */
+
+  .main-body {
+    padding: 50px !important;
+  }
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.formErrorContent{
+	color: red;
+}
+.dataTables_filter input { width: 220px !important}
+.error_span_msg {color:red;padding:5px;}
+.main-header{background-color:#222d32;color: white !important;}
+.main-footer{background-color:#222d32;color: white !important;}
+.err_msg{color:red}
