@@ -4,7 +4,6 @@
 
 class IndexController extends Controller{
 
-	// index method - call after successfull login.
     public function indexAction(){
 
         include  CURR_VIEW_PATH . "content.php";
