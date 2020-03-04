@@ -8,19 +8,20 @@ class UserModel extends Model{
 		
 		$user_name = $password = "";
 		$username_err = $password_err = "";
+
+		// Validate Form Data to prevent various attacks
+		$user_name = validate_input($post["user_name"]);
+		$password = validate_input($post["password"]);
+
 		// Check if user_name is empty
-		if(empty(trim($post["user_name"]))){
+		if(empty($user_name)){
 			$username_err = "Please enter username.";
-		} else{
-			$user_name = trim($post["user_name"]);
-		}
+		} 
 		
 		// Check if password is empty
-		if(empty(trim($post["password"]))){
+		if(empty($password)){
 			$password_err = "Please enter your password.";
-		} else{
-			$password = trim($post["password"]);
-		}
+		} 
 		$password = md5($password);
 		
 		if(empty($username_err) && empty($password_err)){
